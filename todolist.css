@@ -1,0 +1,76 @@
+*, *::before, *::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box; 
+}
+
+/* 1. 基礎重置：把預設的間距拔掉 */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* 給背景一個淡灰色，比較好區分內容 */
+    font-family: sans-serif;
+}
+
+/* 2. 讓外框動起來 */
+.wrap {
+    width: 90%;        /* 在手機上自動縮小到 90% */
+    max-width: 500px;   /* 在電腦上最大只到 500px */
+    margin: 40px auto;  /* 上下留 40px，左右 auto 置中 */
+    
+    /* 讓它像一個乾淨的小卡片 */
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;      /* 圓角 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 淡淡的陰影 */
+}
+
+/* 3. 調整內部的輸入框，讓它在手機上也好點擊 */
+.add-box {
+    display: flex; /* 讓輸入框跟按鈕排成一排 */
+    gap: 8px;      /* 中間留點縫隙 */
+    margin-bottom: 20px;
+}
+
+.txt {
+    flex-grow: 1;  /* 讓輸入框自動撐滿剩下的空間 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.save {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.list{
+    list-style: none;
+    padding:0;
+    /* 移除預設內縮，讓 li 跟上面的輸入框對齊  */
+}
+.list li{
+    margin-bottom: 20px;
+    background-color: beige;
+    padding: 15px 10px;
+    border-radius: 8px; /* 跟外框一樣加點圓角更和諧 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.delete {
+    background-color: #ff4d4f; /* 警告紅色 */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    /* 滑過去變形狀 */
+}
+.delete:hover{
+    background-color:#ff7875;
+    
+}
